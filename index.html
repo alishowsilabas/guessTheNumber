@@ -28,7 +28,7 @@
           <img src="img/favicon.png" class="ballImg" alt="A crystal ball.">
           <h3 id="textOutput"></h3>
           <input type="number" placeholder="Insira um número entre 1 e 100" id="inputBox" min="1" max="100"
-            onchange="numbersCompare()" />
+            onchange="numbersCompare()" onkeydown="validateOnEnter(event)" />
         </section>
         <section class="stats">
           <div class="info">
@@ -40,7 +40,7 @@
             <span id="guesses">0</span>
           </div>
         </section>
-        <button id="newGameButton" onclick="initRandom()">Novo Jogo</button>
+        <button id="newGameButton" onclick="newGame()">Novo Jogo</button>
 
       </div>
     </div>
