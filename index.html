@@ -2,21 +2,20 @@
 <html lang="pt-BR">
 
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link rel="icon" type="image/x-icon" href="img/favicon.png">
   <link rel="stylesheet" href="style.css" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Fontdiner+Swanky&family=Merriweather&family=Montserrat:wght@300&family=Nanum+Gothic&family=Nunito:wght@300&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Fontdiner+Swanky&family=Montserrat:wght@300&display=swap"
     rel="stylesheet">
-  <title>Adivinhe o numero</title>
+
+  <title>adivinheOnumero</title>
 </head>
 
-<body>
+<body onload="initRandom()">
   <audio controls autoplay="true" id="harryAudio">
     <source src="/harry.mp3" type="audio/mpeg">
-    If you're seeing this: Your browser does not support the audio element.
   </audio>
   <main>
     <div>
@@ -28,17 +27,16 @@
         <section>
           <img src="img/favicon.png" class="ballImg" alt="A crystal ball.">
           <h3 id="textOutput"></h3>
-          <div id="resultWarning"></div>
           <input type="number" placeholder="Insira um número entre 1 e 100" id="inputBox" min="1" max="100"
             onchange="numbersCompare()" />
         </section>
         <section class="stats">
           <div class="info">
-            <p>TENTATIVAS:</p>
+            <p>Tentativas:</p>
             <span id="attempts">0</span>
           </div>
           <div class="info">
-            <p>PALPITES:</p>
+            <p>Palpites:</p>
             <span id="guesses">0</span>
           </div>
         </section>
