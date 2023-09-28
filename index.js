@@ -36,11 +36,11 @@ function numbersCompare() {
     if (attemptsQtd.length < maxGuesses) {
         if (userNumber > genNumber) {
             document.getElementById('textOutput').style.color = "#FFFF99";
-            document.getElementById('textOutput').innerHTML = 'Seu palpite é muito alto'
+            document.getElementById('textOutput').innerHTML = 'Seu palpite é alto'
             document.getElementById('inputBox').value = ''
         } else if (userNumber < genNumber) {
             document.getElementById('textOutput').style.color = "#99CCFF";
-            document.getElementById('textOutput').innerHTML = 'Seu palpite é muito baixo'
+            document.getElementById('textOutput').innerHTML = 'Seu palpite é baixo'
             document.getElementById('inputBox').value = ''
         } else {
             document.getElementById('textOutput').style.color = "#66FF99";
